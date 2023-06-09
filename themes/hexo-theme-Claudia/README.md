@@ -61,7 +61,7 @@ social:
   facebook:
   linkedin:
   instagram:
-  github: haojen
+  github: 
 
 # Page icon
 favicon: images/favicon.ico

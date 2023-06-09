@@ -13,6 +13,12 @@
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   background: var(--top-bar-bg-color);
 
+  aside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   a {
     margin: 0 8px;
     font-weight: bold;
@@ -22,5 +28,26 @@
 
   h3 {
     font-weight: bold;
+  }
+
+  .theme-switch{
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    &:hover{
+      background-color: var(--theme-hover-color);
+    }
+
+  }
+
+  .theme-icon{
+    color: var(--primary-text-color);
+    cursor: pointer;
+    font-size: 22px;
   }
 }

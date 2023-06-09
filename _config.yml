@@ -8,9 +8,10 @@ subtitle: ''
 description: ''
 keywords:
 author: Devin Deng
-language: en
+language: 
+- zh-CN
+- en
 timezone: ''
-# theme: insulin
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'

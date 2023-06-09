@@ -14,10 +14,10 @@ widgets:
 # social config
 social:
   zhihu:
-  twitter: /
-  facebook: /
+  twitter: 
+  facebook: 
   linkedin:
-  instagram: /
+  instagram: 
   github: AwesomeDevin
 
 user:
