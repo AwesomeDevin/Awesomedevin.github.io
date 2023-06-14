@@ -1,6 +1,8 @@
 ---
 title: 【Nodejs】复制文件并获取进度 
 date: 2021-04-21
+excerpt: 来自阿里的面试题 - NodeJS 复制文件并获取进度 
+index: 1
 categories:
 - nodejs
 tag:
