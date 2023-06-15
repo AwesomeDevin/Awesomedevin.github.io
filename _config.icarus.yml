@@ -235,7 +235,7 @@ widgets:
         # Author's current location
         location: Your location
         # URL or path to the avatar image
-        avatar: 
+        avatar: https://avatars.githubusercontent.com/u/22369504?s=40&v=4
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
@@ -270,24 +270,16 @@ widgets:
         collapsed: true
         # Maximum level of headings to show (1-6)
         depth: 3
-    # Recommendation links widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: links
-        # Names and URLs of the sites
-        links:
-            Hexo: https://hexo.io
-            Bulma: https://bulma.io
+    
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: categories
     # Recent posts widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: recent_posts
     # Archives widget configurations
     -
@@ -297,7 +289,7 @@ widgets:
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: tags
         # How to order tags. For example 'name' to order by name in ascending order, and '-length' to order by number of posts in each tags in descending order
         order_by: name
@@ -334,6 +326,15 @@ widgets:
         action_url: ''
         # Feed claiming verification code
         verification_code: ''
+    # Recommendation links widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: links
+        # Names and URLs of the sites
+        links:
+            Hexo: https://hexo.io
+            Bulma: https://bulma.io
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
