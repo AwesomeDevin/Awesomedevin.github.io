@@ -40,7 +40,7 @@ highlight:
   auto_detect: false
   tab_replace: ''
   wrap: false
-  hljs: true
+  hljs: false
 prismjs:
   enable: false
   preprocess: true
@@ -62,7 +62,7 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-theme: icarus
+theme: obsidian
 deploy:
   type: ''
 feed:
