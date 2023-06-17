@@ -63,7 +63,7 @@ welcome_cover: /img/cover.jpg
 cover: /img/welcome-cover.jpg
 
 # 文章内的默认头像
-avatar: https://s2.ax1x.com/2019/09/19/nLtSiD.png
+avatar: /img/avatar.jpeg
 
 # 关闭默认滚动条
 scrollbar: true
@@ -80,6 +80,10 @@ google_analytics:
 
 # 网页图标
 favicon: /img/favicon.png
+
+# 网站logo
+logo: /img/logo.png
+
 
 # rss文件
 rss: atom.xml

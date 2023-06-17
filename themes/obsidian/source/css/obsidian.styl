@@ -137,6 +137,13 @@ a {
   }
 }
 
+a.category{
+  display: block;
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: var(--secondary) !important;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -270,31 +277,21 @@ audio {
   height: 32px;
   animation-delay: 800ms;
   animation-duration: 1.2s;
+  position: relative;
 
   img {
+    position: absolute;
     display: flex;
-    width: 32px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary);
+    left: 4%;
+    top: 50%;
+    margin-top: -25px;
   }
 
-  .image-logo {
-    margin-left: 0.5rem;
-    z-index: 10;
-    position: relative;
-    display: flex;
-    -webkit-background-size: 75px 32px;
-    -moz-background-size: 75px 32px;
-    background-size: 75px 32px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-mask-box-image: url("../img/logo.png");
-    background-color: white;
-    width: 75px;
-    height: 32px;
-    mask-image: url("../img/logo.png");
-    mask-size: contain;
-    transition: background-color 0.5s ease-in-out;
-  }
+ 
 }
 
 img.spin {
@@ -314,20 +311,26 @@ img.spin {
 }
 
 .screen-gradient-after {
-  background: -webkit-gradient(linear, left top, right top, from(var(--primary)), to(var(--gradient-dark)));
-  background: linear-gradient(to right, var(--primary), var(--dark), var(--gradient-middle), var(--gradient-dark));
- 
+  background: var(--site-theme-color);
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  border-bottom-right-radius: 180px;
+  z-index: 1;
+  width: 100%;
+  border-bottom-right-radius: 0;
   -webkit-animation: GradientEffect 1.2s ease infinite;
   -moz-animation: GradientEffect 1.2s ease infinite;
   animation: GradientEffect 1.2s ease infinite;
 }
 
 .screen-gradient-content {
-  padding: calc(200px + 1rem) 10% 0;
-  margin-top: -200px;
+  height: 62px;
   overflow: hidden;
+  padding-left: 130px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--site-dark-4);
 }
 
 @-webkit-keyframes GradientEffect {
@@ -397,7 +400,6 @@ img.spin {
     font-size: 20px;
     line-height: 30px;
     height: 30px;
-    margin-bottom: 1rem;
     max-width: 1200px;
   }
 }
@@ -780,9 +782,8 @@ body.touch {
 }
 
 &::-webkit-scrollbar-thumb {
-  background: var(--primary) !important;
-  background: -webkit-linear-gradient(var(--secondary), var(--dark)) !important;
-  background: linear-gradient(var(--secondary), var(--dark)) !important;
+  background: var(--site-theme-color-reverse) !important;
+
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
 }
@@ -816,7 +817,7 @@ body.touch {
   }
 
   p {
-    color: #ddd;
+    color: var(--secondary);
     font-size: 12px;
     position: absolute;
     width: 100%;
@@ -824,7 +825,7 @@ body.touch {
     bottom: 30px;
 
     a {
-      color: #ddd;
+      color: var(--secondary);
       text-decoration: underline;
     }
 
@@ -842,6 +843,7 @@ footer {
   width: 100%;
   background: #100e17;
   border-top: 1px solid #201c29;
+  padding-bottom: 62px;
 
   p {
     &:first-of-type {
@@ -1126,7 +1128,7 @@ footer {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgba(32, 28, 41, .86);
+  background-color: rgba(70,67,74, 86%);
   color: #fff;
   text-align: center;
   line-height: 50px;
@@ -1158,9 +1160,7 @@ footer {
       height: 400px;
       top: 0;
       left: 50%;
-      background: var(--primary) !important;
-      background: -webkit-linear-gradient(var(--dark), var(--secondary)) !important;
-      background: linear-gradient(var(--dark), var(--secondary)) !important;
+      background: var(--site-theme-color) !important;
       opacity: 0.4;
       border-radius: 45%;
       transform: translate(-50%, -70%) rotate(0);
@@ -1170,9 +1170,7 @@ footer {
 
     &::after {
       border-radius: 47%;
-      background: var(--primary) !important;
-      background: -webkit-linear-gradient(var(--dark), var(--secondary)) !important;
-      background: linear-gradient(var(--dark), var(--secondary)) !important;
+      background: var(--site-theme-color) !important;
       opacity: 0.9;
       transform: translate(-50%, -70%) rotate(0);
       animation: rotate 10s linear -5s infinite;
@@ -2509,13 +2507,12 @@ h1.title {
 }
 
 .post {
-  min-height: 500px;
   width: 60%;
   position: relative;
   display: block;
   left: 10%;
   top: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 10px;
 
   .post-cover {
     position: absolute;
@@ -2528,6 +2525,17 @@ h1.title {
     opacity: 0.85;
     animation-delay: 800ms;
     animation-duration: 800ms;
+  }
+
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 1200px;
+    height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.85;
   }
 }
 
@@ -2579,9 +2587,13 @@ h1.title {
     color: #7a7a8c;
     font-size: 14px;
     font-weight: 900;
-    margin: 80px 0 0 0;
     animation-delay: 800ms;
     animation-duration: 800ms;
+    margin: 20px 0 0 0;
+
+    &.has-margin{
+      margin: 60px 0 0 0;
+    }
 
     a {
       border: none;
@@ -2612,6 +2624,34 @@ h1.title {
     animation-duration: 1s;
     overflow-wrap: break-word;
     word-wrap: break-word;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  .post-row{
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+
+  span.post-title {
+    font-weight: 600;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    font-weight: 700;
+    animation-delay: 600ms;
+    animation-duration: 1s;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    display: inline-flex;
 
     a {
       color: #fff;
@@ -2736,15 +2776,29 @@ h1.title {
 
   }
 
+
   .post-count {
-    margin: 15px 100px 0 0;
-    display: flex;
+    height: 40px;
+    margin-left: 10px;
+    display: inline-flex;
     align-content: flex-start;
+    align-items: center;
     font-size: 14px;
     font-weight: 900;
     line-height: 18px;
-    animation-delay: 800ms;
+    animation-delay: 600ms;
     animation-duration: 800ms;
+
+    &:nth-last-child(1){
+      animation-delay: 1000ms;
+      animation-duration: 800ms;
+      color: var(--secondary);
+    }
+
+    &:nth-last-child(2){
+      animation-delay: 800ms;
+      animation-duration: 800ms;
+    }
 
     span {
       line-height: 18px;
@@ -2770,7 +2824,9 @@ h1.title {
   }
 
   .post-tags-list {
-    margin: 10px 100px 0 0;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
     animation-delay: 500ms;
     animation-duration: 750ms;
   }
@@ -2796,9 +2852,7 @@ h1.title {
       border: 3px solid rgba(255, 255, 255, 0.78);
 
       a {
-        background: var(--primary) !important;
-        background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-        background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
+        background: var(--site-theme-color-reverse) !important;
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
         -webkit-box-decoration-break: clone !important;
@@ -2808,9 +2862,7 @@ h1.title {
 
     a {
       &:hover {
-        background: var(--primary) !important;
-        background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-        background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
+        background: var(--site-theme-color-reverse) !important;
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
         -webkit-box-decoration-break: clone !important;
@@ -2937,7 +2989,6 @@ h1.title {
 }
 
 .post-tags-list {
-  margin-top: 10px;
   display: table;
 }
 
@@ -2952,7 +3003,6 @@ h1.title {
   border: 3px solid #28242f;
   border-radius: 2rem;
   padding: .2rem .85rem .25rem;
-  margin: 1rem 0.66rem 2.5rem 0;
   cursor: pointer;
 
   &:hover {
@@ -3838,7 +3888,6 @@ pre {
       color: #fff;
       font-size: 12px;
       margin-left: 0;
-      margin-bottom: 1rem;
     }
   }
 
@@ -3880,7 +3929,7 @@ pre {
       }
     }
 
-    h3.post-title {
+    span.post-title {
       font-size: 24px;
       margin: 10px 30px 0 0;
     }

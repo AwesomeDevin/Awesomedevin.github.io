@@ -1,5 +1,5 @@
 ---
-title: 【Javascript】使用react hooks 构建 redux 进行状态管理
+title: 使用react hooks 构建 redux 进行状态管理
 date: 2021-04-20
 categories:
 - javascript

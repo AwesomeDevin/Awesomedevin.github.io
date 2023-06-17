@@ -15,8 +15,7 @@
 <div id="header">
     <div>
         <div class="logo animated fadeInDown">
-            <img src="<%- url_for(theme.favicon) %>" alt="">
-            <a class="image-logo" href="/"></a>
+            <img src="<%- url_for(theme.logo) %>" alt="">
         </div>
         <ul id="menu-menu" class="menu text-menu">
             <% for (var i in theme.menu){ %>
@@ -32,7 +31,7 @@
     </div>
 </div>
 <div id="screen">
-    <div id="mark">
+    <!-- <div id="mark">
         <div class="cover animated fadeIn" style="
             animation-delay: 900ms;
             animation-duration: 2.8s;
@@ -40,8 +39,8 @@
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
                 url(<%- url_for(first.cover || "/img/cover.jpg") %>);">
         </div>
-    </div>
-    <% if ( first ) { %>
+    </div> -->
+    <!-- <% if ( first ) { %>
     <div id="post0" class="else">
         <p class="animated fadeInDown">
             <% if (first.categories.data[0]) { %>
@@ -105,7 +104,7 @@
                 <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
-    <% } %>
+    <% } %> -->
 </div>
 
 <div class="screen-gradient-after">

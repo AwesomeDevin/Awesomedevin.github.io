@@ -1,8 +1,16 @@
 <%
-    page.posts.sort("date", "desc").each(function(post, i){
-    if (page.prev == 0 && i < start) {
-        return true;
-    }
+    var categoryListMap = {}
+    page.posts.each(function(post,i){
+        if (post.categories.data[0] && categoryListMap[post.categories.data[0].name]) {
+            categoryListMap[post.categories.data[0].name] = categoryListMap[post.categories.data[0].name].concat([post])
+        }else if(post.categories.data[0] && !categoryListMap[post.categories.data[0].name]){
+            categoryListMap[post.categories.data[0].name] = [post]
+        }
+    })
+    for (var key in categoryListMap){ 
+        const isFirst = key === Object.keys(categoryListMap)[0]
+        categoryListMap[key].forEach(function(item, j){
 %>
-<%- partial('post/item', {post: post}) %>
-<% }) %>
+    <%- partial('post/item', {post: item, index: j, isFirst: isFirst}) %>
+<% })} %>
+

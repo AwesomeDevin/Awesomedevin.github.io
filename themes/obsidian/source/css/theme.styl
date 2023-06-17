@@ -1,8 +1,8 @@
 &:root {
 	--font-color: #000;
 	--night-font-color: #ddd;
-	--primary: #b2fefa;
-	--secondary: #0ed2f7;
+	--primary: #000;
+	--secondary: #535556;
 	--dark: #0052d4;
 	--gradient-light: #5d9eea;
 	--gradient-middle: #0f27b5;
@@ -10,6 +10,26 @@
 	--code-gradient-light: #cff0ff;
 	--code-gradient-dark: #afcafd;
 	--maxwidth: 1284px;
+
+	--site-theme-color: #000;
+	--site-theme-color-light: #2c83ff;
+	--site-theme-color-hover: #2f3be7;
+	--site-theme-color-active: #2f3be7;
+	--site-theme-color-disabled: #bec2c6;
+	--site-theme-color-reverse: #fff;
+
+	--site-text-color: #232321;
+	--site-success-color: #00a550;
+	--site-warning-color: #e87626;
+	--site-error-color: #d03030;
+	--site-gray-1: #f4f7ff;
+	--site-gray-2: #f5f6f8;
+	--site-gray-3: #e6e9ef;
+	--site-dark-1: #bec2c6;
+	--site-dark-2: #85878c;
+	--site-dark-3: #535556;
+	--site-dark-4: #232321;
+	--site-dark-5: #000;
 }
 
 
@@ -42,21 +62,11 @@
 }
 
 .gradient-text {
-	background: var(--primary) !important;
-	background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-	background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-	-webkit-background-clip: text !important;
-	-webkit-text-fill-color: transparent !important;
-	-webkit-box-decoration-break: clone !important;
-	box-decoration-break: clone !important;
+	background: var(--site-theme-color-reverse) !important;
 }
 .gradient-bg {
-	background: var(--primary) !important;
-	background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-	background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
+	background: var(--site-theme-color-reverse) !important;
 }
 .gradient-bg-rev {
-	background: var(--primary) !important;
-	background: -webkit-linear-gradient(to right, var(--dark), var(--secondary), var(--primary)) !important;
-	background: linear-gradient(to right, var(--dark), var(--secondary), var(--primary)) !important;
+	background: var(--site-theme-color-reverse) !important;
 }
