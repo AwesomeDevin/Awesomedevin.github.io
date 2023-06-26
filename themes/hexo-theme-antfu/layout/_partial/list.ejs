@@ -1,0 +1,17 @@
+<%
+    var dateYearListMap = {}
+    page.posts.each(function(post,i){
+        if (post.date.year() && dateYearListMap[post.date.year()]) {
+            dateYearListMap[post.date.year()] = dateYearListMap[post.date.year()].concat([post])
+        }else if(post.date.year() && !dateYearListMap[post.date.year()]){
+            dateYearListMap[post.date.year()] = [post]
+        }
+    })
+    const yearKeys = Object.keys(dateYearListMap).sort((a, b) => b - a)
+    for (var index in yearKeys){ 
+        const key = yearKeys[index]
+        dateYearListMap[key].forEach(function(item, j){
+%>
+    <%- partial('post/item', {post: item, index: j, isFirst: index === '0' && j === 0, title: key}) %>
+<% })} %>
+

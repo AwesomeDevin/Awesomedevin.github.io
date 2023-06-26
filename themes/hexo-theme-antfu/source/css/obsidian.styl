@@ -55,17 +55,11 @@ h1, h2, h3, h4, h5, h6 {
     background: #b2fefa !important;
     background: -webkit-linear-gradient(to right, #b2fefa, #0ed2f7, #0052d4) !important;
     background: linear-gradient(to right, #b2fefa, #0ed2f7, #0052d4) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    -webkit-box-decoration-break: clone !important;
-    box-decoration-break: clone !important;
+
 
     &:hover {
       background: #fff !important;
-      -webkit-background-clip: text !important;
-      -webkit-text-fill-color: transparent !important;
-      -webkit-box-decoration-break: clone !important;
-      box-decoration-break: clone !important;
+
     }
   }
 }
@@ -137,11 +131,16 @@ a {
   }
 }
 
-a.category{
-  display: block;
+h2.category{
+  display: inline-block;
   margin-bottom: 20px;
   font-size: 40px;
-  color: var(--secondary) !important;
+  color: var(--font-color) !important;
+  cursor: inherit;
+
+  b{
+    color: var(--secondary) !important;
+  }
 }
 
 img {
@@ -176,7 +175,7 @@ audio {
 
   .cover {
     position: relative;
-    top: 0;
+    top: -100px;
     left: 30%;
     width: 1200px;
     height: 800px;
@@ -282,13 +281,13 @@ audio {
   img {
     position: absolute;
     display: flex;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    border: 2px solid var(--secondary);
+    border: 2px solid var(--font-color);
     left: 4%;
     top: 50%;
-    margin-top: -25px;
+    margin-top: -20px;
   }
 
  
@@ -543,34 +542,31 @@ body.touch {
 
 .image-icon,
 .icon-home {
-  -webkit-background-size: 20px 20px;
-  -moz-background-size: 20px 20px;
-  background-size: 20px 20px;
+  -webkit-background-size: 30px 30px;
+  -moz-background-size: 30px 30px;
+  background-size: 30px 30px;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   left: 20px;
   cursor: pointer;
 }
 
 .image-icon {
-  top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .icon-home {
-  top: 14px;
+  top: 50%;
+  margin-top: -15px;
+  border: 1px solid var(--font-color);
+  border-radius: 50%;
 }
 
 .subtitle {
-  background: #b2fefa !important;
-  background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-  background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  -webkit-box-decoration-break: clone !important;
-  box-decoration-break: clone !important;
   position: absolute;
   top: 0;
   left: 50%;
@@ -584,6 +580,7 @@ body.touch {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  color: var(--font-color);
 }
 
 .icon-play {
@@ -592,16 +589,14 @@ body.touch {
   top: 10px;
   font-size: 15px;
   cursor: pointer;
-  background: #b2fefa !important;
-  background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-  background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  -webkit-box-decoration-break: clone !important;
-  box-decoration-break: clone !important;
-  transition: display 400ms ease-in-out;
+  color: var(--light-font-color);
+  transition: display 400ms ease-in-out, color 200ms ease-in-out;
   animation-delay: 800ms;
   animation-duration: 1.2s;
+
+  &:hover {
+    color: var(--font-color);
+  }
 }
 
 .icon-pause {
@@ -611,16 +606,13 @@ body.touch {
   font-size: 17px;
   cursor: pointer;
   font-weight: 300;
-  background: #b2fefa !important;
-  background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-  background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  -webkit-box-decoration-break: clone !important;
-  box-decoration-break: clone !important;
-  transition: display 400ms ease-in-out;
+  transition: display 400ms ease-in-out, color 200ms ease-in-out;
   animation-delay: 800ms;
   animation-duration: 1.2s;
+  color: var(--light-font-color);
+  &:hover {
+    color: var(--font-color);
+  }
 }
 
 .icon-images {
@@ -690,16 +682,11 @@ body.touch {
   > a {
     display: inline-block;
     margin-right: 15px;
-    background: #b2fefa !important;
-    background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-    background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    -webkit-box-decoration-break: clone !important;
-    box-decoration-break: clone !important;
+    color: var(--light-font-color);
+    transition: color 200ms ease-in-out;
 
     &:hover {
-      color: #333;
+      color: var(--font-color);
     }
   }
   position: relative;
@@ -808,11 +795,11 @@ body.touch {
 
   .menu {
     a {
-      color: #333;
-      -webkit-background-clip: text !important;
-      -webkit-text-fill-color: transparent !important;
-      -webkit-box-decoration-break: clone !important;
-      box-decoration-break: clone !important;
+      color: var(--light-font-color);
+
+      &:hover {
+        color: var(--font-color);
+      }
     }
   }
 
@@ -844,6 +831,7 @@ footer {
   background: #100e17;
   border-top: 1px solid #201c29;
   padding-bottom: 62px;
+  margin-top: 20px;
 
   p {
     &:first-of-type {
@@ -1046,7 +1034,7 @@ footer {
   top: 0;
 
   li {
-    animation-delay: 600ms;
+    animation-delay: -600ms;
     animation-duration: 1.2s;
     display: flex;
     flex-direction: row-reverse;
@@ -1097,26 +1085,14 @@ footer {
   }
 
   a {
-    color: #666;
-    letter-spacing: 2px;
-    background: rgba(255, 255, 255, 0.96);
-    opacity: 0.86;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    -webkit-box-decoration-break: clone !important;
-    box-decoration-break: clone !important;
+    color: var(--light-font-color);
+    letter-spacing: 4px;
     height: 32px;
     line-height: 32px;
+    transition: color 200ms ease-in-out;
 
     &:hover {
-      color: #333;
-      background: var(--primary) !important;
-      background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-      background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-      -webkit-background-clip: text !important;
-      -webkit-text-fill-color: transparent !important;
-      -webkit-box-decoration-break: clone !important;
-      box-decoration-break: clone !important;
+      color: var(--font-color);
     }
   }
 }
@@ -2507,12 +2483,15 @@ h1.title {
 }
 
 .post {
-  width: 60%;
+  width: 100%;
   position: relative;
   display: block;
   left: 10%;
-  top: 100px;
-  margin-bottom: 10px;
+  top: 0;
+  
+  &:nth-child(1){
+    margin-top: 200px;
+  }
 
   .post-cover {
     position: absolute;
@@ -2529,7 +2508,7 @@ h1.title {
 
   .cover {
     position: absolute;
-    top: 0;
+    top: -100px;
     left: 30%;
     width: 1200px;
     height: 800px;
@@ -2543,7 +2522,7 @@ h1.title {
   position: relative;
   background: transparent;
   text-align: left;
-  top: 20px;
+  top: 0px;
   width: 1200px;
 
   p {
@@ -2589,7 +2568,7 @@ h1.title {
     font-weight: 900;
     animation-delay: 800ms;
     animation-duration: 800ms;
-    margin: 20px 0 0 0;
+    margin: 0px 0 0 0;
 
     &.has-margin{
       margin: 60px 0 0 0;
@@ -2624,16 +2603,14 @@ h1.title {
     animation-duration: 1s;
     overflow-wrap: break-word;
     word-wrap: break-word;
-
-    a {
-      color: #fff;
-    }
   }
 
   .post-row{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     color: #fff;
+    margin-bottom: 20px;
   }
   
 
@@ -2641,7 +2618,7 @@ h1.title {
     font-weight: 600;
     color: #fff;
     font-size: 18px;
-    height: 40px;
+    height: auto;
     display: inline-flex;
     align-items: center;
     line-height: 1.1;
@@ -2652,14 +2629,22 @@ h1.title {
     overflow-wrap: break-word;
     word-wrap: break-word;
     display: inline-flex;
+    animation-name: fadeInDown;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
 
     a {
-      color: #fff;
+      color: var(--light-font-color);
+      transition: color 200ms ease-in-out;
+      &:hover{
+        color: var(--font-color);
+      }
     }
   }
 
   .md-content {
-    color: var(--night-font-color);
+    color: var(--light-font-color);
     margin: 10px 100px 10px 0;
     font-weight: 600;
     line-height: 1.8;
@@ -2786,17 +2771,17 @@ h1.title {
     font-size: 14px;
     font-weight: 900;
     line-height: 18px;
-    animation-delay: 600ms;
+    animation-delay: 1000ms;
     animation-duration: 800ms;
 
     &:nth-last-child(1){
-      animation-delay: 1000ms;
+      animation-delay: 1800ms;
       animation-duration: 800ms;
       color: var(--secondary);
     }
 
     &:nth-last-child(2){
-      animation-delay: 800ms;
+      animation-delay: 1400ms;
       animation-duration: 800ms;
     }
 
@@ -2806,7 +2791,7 @@ h1.title {
       display: flex;
       justify-content: center;
       align-content: center;
-      color: #fff;
+      color: var(--light-font-color);
 
       i {
         margin-right: 5px;
@@ -2835,8 +2820,6 @@ h1.title {
   }
 
   .post-tags-list-item {
-    animation-delay: 600ms;
-    animation-duration: 1s;
     margin-right: 10px;
     float: left;
     color: #7a7a8c;
@@ -2850,25 +2833,12 @@ h1.title {
 
     &:hover {
       border: 3px solid rgba(255, 255, 255, 0.78);
-
       a {
-        background: var(--site-theme-color-reverse) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        -webkit-box-decoration-break: clone !important;
-        box-decoration-break: clone !important;
+        color: var(--font-color) ;
       }
     }
 
-    a {
-      &:hover {
-        background: var(--site-theme-color-reverse) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        -webkit-box-decoration-break: clone !important;
-        box-decoration-break: clone !important;
-      }
-    }
+    
   }
 }
 
@@ -3006,13 +2976,6 @@ h1.title {
   cursor: pointer;
 
   &:hover {
-    background: var(--primary) !important;
-    background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-    background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    -webkit-box-decoration-break: clone !important;
-    box-decoration-break: clone !important;
     border: 4px solid rgba(255, 255, 255, 0.7);
   }
 }
@@ -3607,6 +3570,14 @@ pre {
     }
   }
 
+  .else{
+    .post-row{
+      margin-bottom: 0;
+    }
+  }
+  
+
+
   #screen {
     .cover {
       left: 20%;
@@ -3709,7 +3680,7 @@ pre {
     > p {
       &:first-child {
         font-size: 12px;
-        margin: 50px 0 15px 0;
+        margin: 0px 0 0 0;
       }
     }
 
@@ -3894,7 +3865,7 @@ pre {
   .post {
     width: 92%;
     left: 4%;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     display: block;
     margin: 10px 0 0 0;
 
@@ -3905,7 +3876,7 @@ pre {
     }
 
     &:first-of-type {
-      margin-top: 0;
+      margin-top: 100px;
     }
   }
 
@@ -3915,7 +3886,7 @@ pre {
     width: 100%;
     background: transparent;
     border: none;
-    padding: 0 0 100px 0;
+    padding: 0 0 10px 0;
     display: block;
 
     .md-content {
@@ -3931,11 +3902,11 @@ pre {
 
     span.post-title {
       font-size: 24px;
-      margin: 10px 30px 0 0;
+      margin: 10px 0px 0 0;
     }
 
     .post-count {
-      margin: 15px 30px 0 0;
+      margin: 15px 0px 0 0;
 
       i {
         display: none;

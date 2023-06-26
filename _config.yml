@@ -62,7 +62,7 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-theme: obsidian
+theme: hexo-theme-antfu
 deploy:
   type: ''
 feed:

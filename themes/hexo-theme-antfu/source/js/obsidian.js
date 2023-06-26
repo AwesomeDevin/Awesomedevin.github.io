@@ -936,8 +936,8 @@ $(function () {
           }
           header.style.paddingTop = '20px';
           header.style.background = 'rgba(16,14,23,1)';
-          header.style.borderBottom = '1px solid #201c29';
-          header.style.boxShadow = '0 0 30px rgba(0, 0, 0, 1)';
+          // header.style.borderBottom = '1px solid #201c29';
+          // header.style.boxShadow = '0 0 30px rgba(0, 0, 0, 1)';
           refOffset = newOffset;
         } else {
           if ($(window).width() <= 780) {
@@ -1338,6 +1338,6 @@ $(function () {
     '%c Github %c',
     'background:#24272A; color:#73ddd7',
     '',
-    'https://github.com/TriDiamond/hexo-theme-obsidian'
+    'https://github.com/AwesomeDevin/hexo-theme-antfu'
   );
 });

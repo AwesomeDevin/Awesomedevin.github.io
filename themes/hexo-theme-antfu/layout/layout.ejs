@@ -27,14 +27,14 @@
         Powered by <%- link_to("http://hexo.io/", "Hexo", {external: true})%>
         Theme
         <span class="gradient-text">
-            <%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian", "Obsidian", {external: true})%>
+            <%- link_to("https://github.com/AwesomeDevin/hexo-theme-antfu", "Antfu", {external: true})%>
         </span>
-        <small><%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md", 'v'+theme.version, {external: true})%></small>
+        <small><%- link_to("https://github.com/AwesomeDevin/hexo-theme-antfu/blob/master/CHANGELOG.md", 'v'+theme.version, {external: true})%></small>
         <% if (theme.beian.enable == true) { %>
         </br>
         <%= theme.beian.beianloc %>
         <span class="gradient-text">
-            <%- link_to("https://beian.miit.gov.cn/", theme.beian.beianid, {external: true})%>
+            <%- link_to("https://beian.miit.gov.cn/", "备案号：" + theme.beian.beianid, {external: true})%>
         </span>
         <% } %>
         <% if (theme.police.enable == true) { %>

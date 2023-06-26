@@ -1,5 +1,5 @@
 {
-  "name": "hexo-theme-obsidian",
+  "name": "hexo-theme-antfu",
   "version": "1.0.0",
   "description": " A noble dark obsidian style Hexo theme, it's responsive, hight quality, fancy, high class.",
   "scripts": {
@@ -7,20 +7,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TriDiamond/hexo-theme-obsidian.git"
+    "url": "git+https://github.com/AwesomeDevin/hexo-theme-antfu.git"
   },
   "keywords": [
     "hexo-theme",
     "hexo",
     "obsidian",
-    "dark-theme"
+    "dark-theme",
+    "light-theme",
+    "antfu",
+    "hexo-theme-antfu"
   ],
   "author": "TriDiamond",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TriDiamond/hexo-theme-obsidian/issues"
+    "url": "https://github.com/AwesomeDevin/hexo-theme-antfu/issues"
   },
-  "homepage": "https://github.com/TriDiamond/hexo-theme-obsidian#readme",
+  "homepage": "https://github.com/AwesomeDevin/hexo-theme-antfu#readme",
   "private": true,
   "devDependencies": {
     "hexo-wordcount": "^6.0.1",

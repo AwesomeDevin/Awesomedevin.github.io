@@ -1,6 +1,6 @@
 # 更新日志
 
-[English Changelog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)
+[English Changelog](https://github.com/AwesomeDevin/hexo-theme-antfu/blob/master/CHANGELOG.md)
 
 ## 🚀 v1.4.9.3 (2021-07-119)
 
@@ -141,7 +141,7 @@ mouse:
 
 ### 更变
 
-- 目录现在只展示到三级，可以解决超过三级后的文字会超出内容框外。 ([#20](https://github.com/TriDiamond/hexo-theme-obsidian/issues/20))
+- 目录现在只展示到三级，可以解决超过三级后的文字会超出内容框外。 ([#20](https://github.com/AwesomeDevin/hexo-theme-antfu/issues/20))
 - 文章的特效更加顺滑了。
 
 ## 🚀 v1.4.2 (2019-11-11)

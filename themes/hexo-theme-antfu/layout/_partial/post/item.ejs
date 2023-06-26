@@ -1,5 +1,5 @@
 <div class="post" id="post">
-    <% if ( isFirst ) { %>
+    <!-- <% if ( isFirst ) { %>
         <div class="cover animated fadeIn" style="
             animation-delay: 900ms;
             animation-duration: 2.8s;
@@ -7,22 +7,16 @@
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
                 url(<%- url_for("/img/cover.jpg") %>);">
         </div>
-    <% } %>
+    <% } %> -->
     
-    
-    <!-- <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(<%- post.cover || theme.cover %>);">
-    </div> -->
+
     <div class="else">
         <p class="<%- index === 0 ? 'has-margin animated fadeInDown':'animated fadeInDown' %>">
-            <% if (post.categories.data[0] && index === 0) { %>
-                <a class="category" href="<%- '/categories/' + post.categories.data[0].name %>">
-                  <b>「 </b><%- post.categories.data[0].name.toUpperCase() %><b> 」</b>
-                </a>
-            <% } else if(index === 0) { %>
-                <a class="category" href="javascript:;"><b>「 </b><%= __('default_category') %><b> 」</b></a>
+            <% if (index === 0) { %>
+                <!-- <a class="category" href="<%- '/categories/' + post.categories.data[0].name %>"> -->
+                <h2 class="category">
+                  <b>「 </b><%- title.toUpperCase() %><b> 」</b>
+                </h2>
             <% } %>
 
 
