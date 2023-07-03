@@ -8,8 +8,7 @@ body {
   list-style: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
-  background: #100e17;
-  font-family: 'Rubik', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif !important;
+  background: var(--gradient-dark);
   font-weight: 700;
   position: relative;
   overflow-x: hidden;
@@ -26,7 +25,7 @@ body {
     transition: opacity 600ms linear;
     opacity: 0;
     z-index: 1000;
-    background: #100e17;
+    background: var(--gradient-dark);
 
     > .la-ball-atom {
       position: absolute;
@@ -89,7 +88,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
-  background: #100e17;
+  background: var(--gradient-dark);
 }
 
 body.loading {
@@ -109,14 +108,14 @@ body.loading {
   .nav {
     opacity: 0;
   }
-  background: #100e17;
+  background: var(--gradient-dark);
   height: 100%;
   overflow: hidden;
   transition: all 400ms ease-in-out;
 }
 
 html.loading {
-  background: #100e17;
+  background: var(--gradient-dark);
   height: 100%;
   overflow: hidden;
   transition: all 400ms ease-in-out;
@@ -170,7 +169,7 @@ audio {
 #screen {
   z-index: 1;
   position: relative;
-  background: #100e17;
+  background: var(--gradient-dark);
   border-bottom-right-radius: 200px;
 
   .cover {
@@ -396,7 +395,7 @@ img.spin {
   p {
     font-weight: 900;
     color: #fff;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 30px;
     height: 30px;
     max-width: 1200px;
@@ -452,7 +451,7 @@ body.mu {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: #100e17;
+    background-color: var(--gradient-dark);
   }
 }
 
@@ -484,7 +483,7 @@ body.mu {
     border: 5px solid rgba(255, 255, 255, 0.46);
     border-radius: 10px;
     padding: 10px 40px;
-    background: #100e17;
+    background: var(--gradient-dark);
     background: var(--primary) !important;
     background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
     background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
@@ -509,7 +508,7 @@ body.mu {
 #top {
   height: 50px;
   text-align: center;
-  background: #100e17;
+  background: var(--gradient-dark);
   width: 100%;
   position: fixed;
   top: 0;
@@ -764,7 +763,7 @@ body.touch {
 &::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-  background: #100e17;
+  background: var(--gradient-dark);
   border-left: 1px solid #201c29;
 }
 
@@ -828,7 +827,7 @@ html.mu {
 
 footer {
   width: 100%;
-  background: #100e17;
+  background: var(--gradient-dark);
   border-top: 1px solid #201c29;
   padding-bottom: 62px;
   margin-top: 20px;
@@ -1731,7 +1730,7 @@ footer {
   padding-bottom: 100px;
   overflow: hidden;
   position: relative;
-  background: #100e17;
+  background: var(--gradient-dark);
 }
 
 #primary {
@@ -1739,7 +1738,7 @@ footer {
 }
 
 #single {
-  background: #100e17;
+  background: var(--gradient-dark);
   position: relative;
 }
 
@@ -1754,11 +1753,11 @@ footer {
 
 .dark-obsidian.section {
   min-height: calc(100vh - 151px) !important;
-  background: #100e17;
+  background: var(--gradient-dark);
 }
 
 .dark-obsidian {
-  background: #100e17;
+  background: var(--gradient-dark);
 
   .article {
     background: transparent;
@@ -1777,7 +1776,7 @@ footer {
       background-size: cover;
       background-repeat: no-repeat;
       opacity: 0.85;
-      background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.46), #100e17), url("../img/cover.jpg");
+      background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.46), var(--gradient-dark)), url("../img/cover.jpg");
       z-index: -1;
       animation-delay: 900ms;
       animation-duration: 1.2s;
@@ -2023,7 +2022,7 @@ h1.title {
   width: 100%;
   height: 100%;
   z-index: 5;
-  background: #100e17;
+  background: var(--gradient-dark);
   left: 100%;
   -moz-transition: left 0.3s cubic-bezier(0, 0, 0.2, 1);
   -webkit-transition: left 0.3s cubic-bezier(0, 0, 0.2, 1);
@@ -2108,12 +2107,12 @@ h1.title {
 
             a {
               &:hover {
-                color: #100e17;
+                color: var(--gradient-dark);
               }
 
               span {
                 &:hover {
-                  color: #100e17;
+                  color: var(--gradient-dark);
                 }
                 font-size: 28px;
                 line-height: 28px;
@@ -2125,7 +2124,7 @@ h1.title {
             }
 
             &:hover {
-              color: #100e17;
+              color: var(--gradient-dark);
             }
 
             &:nth-last-of-type(2) {
@@ -2454,7 +2453,7 @@ h1.title {
 .article-header-wrapper {
   width: 100%;
   height: 500px;
-  background: #100e17;
+  background: var(--gradient-dark);
   position: relative;
   z-index: 1;
   border-bottom-right-radius: 200px;
@@ -2563,7 +2562,7 @@ h1.title {
   }
 
   > p {
-    color: #7a7a8c;
+    color: var(--deep-light-font-color);
     font-size: 14px;
     font-weight: 900;
     animation-delay: 800ms;
@@ -2795,14 +2794,14 @@ h1.title {
 
       i {
         margin-right: 5px;
-        color: #7a7a8c;
+        color: var(--deep-light-font-color);
         font-weight: 900;
         font-style: normal;
       }
 
       b {
         font-size: 20px;
-        color: #7a7a8c;
+        color: var(--deep-light-font-color);
         margin-right: 5px;
       }
     }
@@ -2822,7 +2821,7 @@ h1.title {
   .post-tags-list-item {
     margin-right: 10px;
     float: left;
-    color: #7a7a8c;
+    color: var(--deep-light-font-color);
     text-transform: uppercase;
     font-weight: 700;
     font-size: .66rem;
@@ -2965,7 +2964,7 @@ h1.title {
 .post-tags-list-item {
   transition: all 400ms linear;
   float: left;
-  color: #7a7a8c;
+  color: var(--deep-light-font-color);
   text-transform: uppercase;
   font-weight: 700;
   font-size: .66rem;
@@ -3301,7 +3300,6 @@ h1.title {
 }
 
 code {
-  font-family: 'Rubik', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif !important;
   background: rgba(99, 99, 99, 0.07);
   background: #b2fefa;
   background: -webkit-linear-gradient(to right, var(--code-gradient-light), var(--code-gradient-dark));
@@ -3315,7 +3313,6 @@ code {
 }
 
 pre {
-  font-family: 'Rubik', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif !important;
   margin: 2em 0;
 
   .comment {

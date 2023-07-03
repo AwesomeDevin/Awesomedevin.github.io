@@ -63,7 +63,7 @@ function utiliseBgColor() {
     if ($('#single').length) {
       $('html').css('background', '#fff');
     } else {
-      $('html').css('background', '#100e17');
+      $('html').css('background', '#000');
     }
   }, 500);
 }

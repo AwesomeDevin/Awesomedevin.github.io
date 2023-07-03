@@ -5,8 +5,10 @@
     <div id="primary" >
         <%- partial('_partial/list', {start: 0}) %>
     </div>
-    
-    <%- partial('_partial/categories-popover') %>
+
+    <% if (is_home()) { %>
+        <%- partial('_partial/categories-popover') %>
+    <% } %>
     
     <% if (page.total > 1 && page.next_link){ %>
 
