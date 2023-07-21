@@ -1,0 +1,76 @@
+<div class="post" id="post">
+    <!-- <% if ( isFirst ) { %>
+        <div class="cover animated fadeIn" style="
+            animation-delay: 900ms;
+            animation-duration: 2.8s;
+            background-image:
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
+                url(<%- url_for("/img/cover.jpg") %>);">
+        </div>
+    <% } %> -->
+    
+
+    <div class="else">
+        <p class="<%- index === 0 ? 'has-margin animated fadeInDown':'animated fadeInDown' %>">
+            <% if (index === 0) { %>
+                <!-- <a class="category" href="<%- '/categories/' + post.categories.data[0].name %>"> -->
+                <h2 class="category">
+                  <!-- <b>「 </b> -->
+                  <span><%- title.toUpperCase() %></span>
+                  <!-- <b> 」</b> -->
+                </h2>
+            <% } %>
+
+
+            <div class="post-row">
+               
+                
+                <span class="post-title">
+                    <%- link_to(post.path, post.title || "Untitled", {class: "posttitle"}) %>
+                </span>
+                <% if (theme.symbols_count_time.enable) { %>
+                    <span class="post-count animated fadeInDown">
+                        <% if (theme.symbols_count_time.wordCount) { %>
+                            <span>
+                                <b class="iconfont icon-text2"></b> <i><%= __('word_count') %></i>
+                                <%= symbolsCount(post.content) %>
+                            </span>
+                        <% } %>
+                    </span>
+
+                    <span class="post-count animated fadeInDown">
+                        <% if (theme.symbols_count_time.readCount) { %>
+                            <span>
+                                <b class="iconfont icon-timer__s"></b> <i><%= __('read_time') %></i>
+                                <%= symbolsTime(
+                                        post.content,
+                                        theme.symbols_count_time.awl,
+                                        theme.symbols_count_time.wpm,
+                                        theme.symbols_count_time.suffix
+                                ) %>
+                            </span>
+                        <% } %>
+                        <% if (theme.valine.enable == true && theme.valine.visitor == true) { %>
+                            <span id="<%- '/' + post.path %>" class="leancloud_visitors" data-flag-title="<%- page.title %>">
+                                <b class="iconfont icon-read"></b> <i><%= __('read_count') %></i>
+                                <span class="leancloud-visitors-count">1000000</span>
+                            </span>
+                        <% } %>
+                    </span>
+                    
+                <% } %>
+
+                <% if (post.tags && post.tags.length){ %>
+                    <%- list_tags(post.tags, {
+                        show_count: false,
+                        class: 'animated fadeInDown post-tags'
+                    }) %>
+                <% } %>
+
+                <span class="post-count animated fadeInDown">
+                    <%- post.date.locale(config.language || '').format("MMMM DD, YYYY") %>
+                </span>
+            </div>
+        </p>
+    </div>
+</div>

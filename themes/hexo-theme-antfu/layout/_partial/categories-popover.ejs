@@ -1,0 +1,23 @@
+<div  id="categories-popover">
+  <%
+    var categoryListMap = {}
+    page.posts.each(function(post,i){
+        if (post.categories.data[0] && categoryListMap[post.categories.data[0].name]) {
+            categoryListMap[post.categories.data[0].name] = categoryListMap[post.categories.data[0].name].concat([post])
+        }else if(post.categories.data[0] && !categoryListMap[post.categories.data[0].name]){
+            categoryListMap[post.categories.data[0].name] = [post]
+        }
+    })
+    const categoryListMapKeys = Object.keys(categoryListMap)
+    categoryListMapKeys.forEach(function(item){
+%>
+  <div class="categories-popover-item">
+    <a class="category" href="<%- '/categories/' + item %>">
+      <div class="categories-popover-item-title"><%- item %></div>
+      <div class="categories-popover-item-desc">共发布了<span><%- categoryListMap[item].length %></span>篇文章</div>
+      <div class="categories-popover-item-tag"><%- categoryListMap[item].length %></div>
+    </a>
+  </div>
+<% }) %>
+  <div class="categories-popover-bag"></div>
+</div>
