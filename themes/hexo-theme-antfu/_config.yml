@@ -39,7 +39,9 @@ version: '0.0.1'
 
 # 菜单设置 | 格式 = 菜单名: 菜单url
 menu:
-  PAGE: /page
+  POST: /post
+  Archived: /archives
+  Categories: '/categories'
 
 # 分类页和标签页自定义标题配置
 page_titles:
@@ -203,7 +205,7 @@ police:
 # 自定义鼠标样式
 mouse:
 # 启用
-  enable: true
+  enable: false
 # 默认样式
   default: /default.png
 # 悬浮及点击样式
